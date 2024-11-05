@@ -9,7 +9,7 @@ st.set_page_config (
 #image_path = '/Users/alexm/Documents/REPOS/FTC/Ciclo_6/'
 #image = Image.open ('logo_delivery.png')
 
-st.sidebar.image (image, width=120)
+#st.sidebar.image (image, width=120)
 
 st.sidebar.markdown ('#Cury Company')
 st.sidebar.markdown ('##Fastest delivery in town')
