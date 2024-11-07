@@ -6,10 +6,10 @@ st.set_page_config (
     page_icon=''
 )
 
-#image_path = '/Users/alexm/Documents/REPOS/FTC/Ciclo_6/'
-#image = Image.open ('logo_delivery.png')
+#image_path = '/Users/alexandremarquesdasilva/Cursos/Curso Comunidade DS/FTC_Curry-Company/'
+image = Image.open ('logo_delivery.png')
 
-#st.sidebar.image (image, width=120)
+st.sidebar.image (image, width=120)
 
 st.sidebar.markdown ('#Cury Company')
 st.sidebar.markdown ('##Fastest delivery in town')
@@ -34,7 +34,7 @@ st.markdown (
         
     Ask for Help
     - Time DS Xande
-    - @alexandremsilva1971
+    - @alexandremsilva02021971
     
 """)
 

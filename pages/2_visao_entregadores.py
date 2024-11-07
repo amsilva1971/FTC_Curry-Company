@@ -7,6 +7,7 @@ from haversine import haversine
 import plotly.express as px
 import folium
 from streamlit_folium import folium_static
+from datetime import datetime
 
 st.set_page_config (page_title='Visão entregadores', page_icon='', layout='wide') 
 
@@ -85,16 +86,17 @@ df = limpeza (df)
 #============================
 
 # Importando o logotipo da empresa 'logo_delivery.png' 
-arquivo='logo_delivery.png'
-logo=Image.open (arquivo)
-st.sidebar.image (logo, width =120)
+#arquivo='logo_delivery.png'
+#logo=Image.open (arquivo)
+image = Image.open ('logo_delivery.png')
+st.sidebar.image (image, width =120)
 
 st.sidebar.markdown ('# Cury Company')
 st.sidebar.markdown ('## Fastest delivery in town')
 st.sidebar.markdown ('--------')
 
 # Criando os filtros (inputs do usuário)
-date = st.sidebar.slider ('Selecione uma data limite', value=pd.datetime (2022, 4, 13 ), min_value=pd.datetime (2022, 2, 11 ), max_value=pd.datetime (2022, 4, 6 ), format='DD-MM-YYYY' )
+date = st.sidebar.slider ('Selecione uma data limite', value=datetime (2022, 4, 13 ), min_value=datetime (2022, 2, 11 ), max_value=datetime (2022, 4, 6 ), format='DD-MM-YYYY' )
 
 trafic = st.sidebar.multiselect ('Selecione uma condição de trânsito',['Low', 'Medium', 'High', 'Jam'], default = ['Low', 'Medium', 'High', 'Jam'] )
 
